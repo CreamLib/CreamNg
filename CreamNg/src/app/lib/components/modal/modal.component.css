@@ -11,7 +11,7 @@ div.modal {
 header {margin-bottom: 2vw;}
 
 h2 {
-  font-size: 1.2em;
+  font: 1.2em var(--stack-b);
   line-height: 1.2;
   margin-right: 5em;
 }
@@ -71,4 +71,11 @@ button.modal-close {
 }
 :host.simple-dialog header {
   margin-bottom: 1rem;
+}
+
+
+/* ------------------ MEDIA QUERIES ------------------ */
+
+@media screen and (min-width: 1000px) {
+  h2 {font-size: 1.4em;}
 }

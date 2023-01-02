@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
 })
 export class PortalLayoutComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private cdr: ChangeDetectorRef) { }
 
   ngOnInit(): void { }
 
@@ -24,6 +24,8 @@ export class PortalLayoutComponent implements OnInit {
     if(this.sectionNodeList.length == 0) {
       this.isThereSubNav = false;
     }
+    this.currentUrl = this.router.url;
+    this.cdr.detectChanges();
   }
 
 }

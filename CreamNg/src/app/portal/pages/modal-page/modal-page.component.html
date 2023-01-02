@@ -1,4 +1,4 @@
-<section id="general-tabs">
+<section id="full-modal">
   <h3>Full Modal</h3>
 
   <div class="introduction editorial">
@@ -15,14 +15,52 @@
         <app-modal-trigger [modal]="exempleModal">
           Label of the button
         </app-modal-trigger>
-        <app-modal-trigger [modal]="exempleModal2">
-          Opens small modal
-        </app-modal-trigger>
       </p>
 
       <app-modal #exempleModal modalTitle="This is the title of the modal">
         <p>Content of the modal</p>
       </app-modal>
+
+    </app-tab-panel>
+    <app-tab-panel class="block-style" tabTitle="Code">
+      <pre>
+&lt;app-modal-trigger [modal]=&#34;exempleModal&#34;&gt;
+  Label of the button
+&lt;/app-modal-trigger&gt;
+
+&lt;app-modal #exempleModal modalTitle=&#34;This is the title of the modal&#34;&gt;
+  &lt;p&gt;Content of the modal&lt;/p&gt;
+&lt;/app-modal&gt;
+      </pre>
+      <app-message-block>
+        <p>If actions inside the modal should close it, you can call the
+          <code>ToggleOpen</code> function using the modal's
+        identifier.</p>
+        <p>You may add aditional functions to the same event.</p>
+      </app-message-block>
+    </app-tab-panel>
+  </app-tabs>
+</section>
+
+<section id="dialog-modal">
+  <h3>Dialog Modal</h3>
+
+  <div class="introduction editorial">
+    <div class="intro-text">
+      <p>Optional introductory text.</p>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis laborum harum saepe obcaecati asperiores, ut magni minima culpa, laudantium ducimus ipsam consectetur illo voluptates labore. Libero deleniti odit placeat laudantium.</p>
+    </div>
+  </div>
+
+  <app-tabs class="block-style" label="Demo and Code">
+    <app-tab-panel class="block-style" tabTitle="Demo" [isActive]="true">
+
+      <p class="buttons-bar out-form">
+        <app-modal-trigger [modal]="exempleModal2">
+          Opens small modal
+        </app-modal-trigger>
+      </p>
+
       <app-modal class="simple-dialog" #exempleModal2 modalTitle="Cancel contract">
         <p>Content of the modal</p>
         <!-- Style attribute is only for demo! DOn't use it in produciton -->
@@ -34,13 +72,6 @@
     </app-tab-panel>
     <app-tab-panel class="block-style" tabTitle="Code">
       <pre>
-&lt;app-modal-trigger [modal]=&#34;exempleModal&#34;&gt;
-  Label of the button
-&lt;/app-modal-trigger&gt;
-&lt;app-modal #exempleModal modalTitle=&#34;This is the title of the modal&#34;&gt;
-  &lt;p&gt;Content of the modal&lt;/p&gt;
-&lt;/app-modal&gt;
-
 &lt;app-modal-button [modal]=&#34;exempleModal2&#34;&gt;
   Opens small modal
 &lt;/app-modal-trigger&gt;
@@ -59,7 +90,6 @@
       </app-message-block>
     </app-tab-panel>
   </app-tabs>
-
 </section>
 
 <section id="props-n-events">
