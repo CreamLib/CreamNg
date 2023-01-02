@@ -1,0 +1,117 @@
+<section id="general-tabs">
+  <h3>Full Modal</h3>
+
+  <div class="introduction editorial">
+    <div class="intro-text">
+      <p>Optional introductory text.</p>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis laborum harum saepe obcaecati asperiores, ut magni minima culpa, laudantium ducimus ipsam consectetur illo voluptates labore. Libero deleniti odit placeat laudantium.</p>
+    </div>
+  </div>
+
+  <app-tabs class="block-style" label="Demo and Code">
+    <app-tab-panel class="block-style" tabTitle="Demo" [isActive]="true">
+
+      <p class="buttons-bar out-form">
+        <app-modal-trigger [modal]="exempleModal">
+          Label of the button
+        </app-modal-trigger>
+        <app-modal-trigger [modal]="exempleModal2">
+          Opens small modal
+        </app-modal-trigger>
+      </p>
+
+      <app-modal #exempleModal modalTitle="This is the title of the modal">
+        <p>Content of the modal</p>
+      </app-modal>
+      <app-modal class="simple-dialog" #exempleModal2 modalTitle="Cancel contract">
+        <p>Content of the modal</p>
+        <!-- Style attribute is only for demo! DOn't use it in produciton -->
+        <p class="buttons-bar" style="margin-top: 2rem">
+          <button (click)="test();exempleModal2.ToggleOpen()">Ok</button>
+        </p>
+      </app-modal>
+
+    </app-tab-panel>
+    <app-tab-panel class="block-style" tabTitle="Code">
+      <pre>
+&lt;app-modal-trigger [modal]=&#34;exempleModal&#34;&gt;
+  Label of the button
+&lt;/app-modal-trigger&gt;
+&lt;app-modal #exempleModal modalTitle=&#34;This is the title of the modal&#34;&gt;
+  &lt;p&gt;Content of the modal&lt;/p&gt;
+&lt;/app-modal&gt;
+
+&lt;app-modal-button [modal]=&#34;exempleModal2&#34;&gt;
+  Opens small modal
+&lt;/app-modal-trigger&gt;
+&lt;app-modal class=&#34;simple-dialog&#34; #exempleModal2 modalTitle=&#34;Cancel contract&#34;&gt;
+  &lt;p&gt;Content of the modal&lt;/p&gt;
+  &lt;p class=&#34;buttons-bar&#34;&gt;
+    &lt;button (click)=&#34;test();exempleModal2.ToggleOpen()&#34;&gt;Ok&lt;/button&gt;
+  &lt;/p&gt;
+&lt;/app-modal&gt;
+      </pre>
+      <app-message-block>
+        <p>If actions inside the modal should close it, you can call the
+          <code>ToggleOpen</code> function using the modal's
+        identifier.</p>
+        <p>You may add aditional functions to the same event.</p>
+      </app-message-block>
+    </app-tab-panel>
+  </app-tabs>
+
+</section>
+
+<section id="props-n-events">
+  <h3>Properties and Events</h3>
+
+  <table>
+    <caption>Properties applicable to the component <code lang="en">app-modal</code></caption>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Type</th>
+      <th scope="col">Default</th>
+      <th scope="col">Description</th>
+    </tr>
+    <tr>
+      <td data-head="Name">modalTitle *</td>
+      <td data-head="Type">string</td>
+      <td data-head="Default">--</td>
+      <td>Title of the modal</td>
+    </tr>
+    <tr>
+      <td data-head="Name">&lt;identifier&gt; *</td>
+      <td data-head="Type"><em>#xxxxx</em></td>
+      <td data-head="Default">--</td>
+      <td>Unique identifier of the modal</td>
+    </tr>
+    <tr>
+      <td data-head="Name">simple-dialog</td>
+      <td data-head="Type">(class)</td>
+      <td data-head="Default">--</td>
+      <td>Displays modal in small format, for quick feedback message</td>
+    </tr>
+  </table>
+  <table>
+    <caption>Properties applicable to the component <code lang="en">app-modal-button</code></caption>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Type</th>
+      <th scope="col">Default</th>
+      <th scope="col">Description</th>
+    </tr>
+    <tr>
+      <td data-head="Name">[modal] *</td>
+      <td data-head="Type">string</td>
+      <td data-head="Default">--</td>
+      <td>Value of the target modal unique identifier</td>
+    </tr>
+    <tr>
+      <td data-head="Name">disabled</td>
+      <td data-head="Type">string</td>
+      <td data-head="Default">--</td>
+      <td>Disables button</td>
+    </tr>
+  </table>
+  <p><em>* mandatory properties</em></p>
+</section>

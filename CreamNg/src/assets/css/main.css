@@ -1,0 +1,340 @@
+/* ------------------------------------------------------------
+
+CREAMNg, 2023
+Main stylesheet
+
+------------------------------------------------------------ */
+
+@import 'vars.css';
+
+
+/*
+INDEX:
+- RESET
+- DEFAULTS
+- ANIMATIONS
+- PAGE STRUCTURE & GRIDS
+- FORMS
+- TABLES
+- BLOCKS
+- EDITORIAL
+- TOOLS
+- MEDIA QUERIES
+*/
+
+
+/* ------------------------- RESET ------------------------- */
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, form, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i,dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+html {
+	height: 100%;
+	scroll-behavior: auto;
+}
+
+header, footer, main, nav, aside,
+  article, section, figure, figcaption {
+  display: block;
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+/* ------------------------ DEFAULTS ----------------------- */
+
+body {
+	font: 100%/1 var(--stack);
+	color: var(--body-text);
+	background-color: var(--body-bg);
+}
+
+h2, h3, h4, h5, h6 {font-weight: normal;}
+
+p, li, dt, dd, h5, th, td {font-size: 0.95em;}
+li li, li p, li dt, li dd {font-size: 100%;}
+
+a {
+  text-decoration: none;
+  color: var(--n-s-dark);
+}
+
+a:visited {
+  color: var(--n-dark);
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ol, ul {
+  list-style-type: none;
+}
+
+button {
+  font: 100%/1 var(--stack-b);
+  color: var(--text-inv);
+  background-color: var(--main-color);
+  padding: 0.5em 0.75em;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+}
+button[disabled] {
+	filter: grayscale(100%) opacity(40%);
+	cursor: initial;
+}
+
+:focus-visible {
+  outline: 3px dotted var(--focus-color);
+}
+
+img {
+  max-width: 100%;
+  border: 0;
+}
+
+strong {
+  font-family: var(--stack-b);
+  font-weight: normal;
+}
+
+em {
+  font-family: var(--stack-i);
+  font-style: normal;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin-bottom: calc(1.5rem + 1vw);
+}
+
+hr {display: none;}
+
+code {
+  font: 100% 'Courrier New', Courier, monospace;
+  color: var(--sec-color);
+  background-color: var(--body-bg);
+  vertical-align: baseline;
+}
+
+
+/* ------------------------- ANIMATIONS ------------------------- */
+
+
+/* ------------------ PAGE STRUCTURE & GRIDS -------------------- */
+
+main {
+  min-height: 80vh;
+  margin: 1rem;
+}
+
+.grid2 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+  .grid2 > * {flex: 1 1 50%;}
+
+
+/* -------------------------- FORMS ----------------------------- */
+
+label {
+  display: block;
+  font: 90%/1 var(--stack-b);
+  padding-bottom: 0.3em;
+}
+
+input, select, textarea {
+  font: 100%/1 var(--stack);
+  color: var(--n-dark);
+  background-color: var(--body-bg);
+  padding: 0.5em;
+  border: 1px solid var(--n-medium);
+  border-radius: 0.3em;
+  transition: all;
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: var(--body-bg);
+  border-bottom-color: var(--sec-light);
+  border-radius: 0;
+}
+
+input[disabled] {
+  color: var(--n-dark);
+  background-color: var(--n-medium);
+  border: none;
+}
+
+.buttons-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+
+/* -------------------------- TABLES ---------------------------- */
+
+caption {
+  font-family: var(--stack-b);
+  text-align: left;
+  color: var(--text-inv);
+  background-color: var(--main-color);
+  padding: 0.5em;
+}
+
+th, td {
+  text-align: left;
+  line-height: 1.25;
+  padding: 0.5em;
+  border: 1px solid var(--n-light);
+}
+
+th {
+  background-color: var(--n-light);
+  border-color: var(--body-bg);
+}
+
+/* !!! Max-width query */
+@media screen and (max-width: 600px) {
+  th {display: none;}
+  tr {
+    display: block;
+    border-top: 2px solid var(--n-light);
+  }
+  td {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 1rem;
+    font-size: 0.8em;
+    border: none;
+    border-bottom: 1px dotted var(--n-medium);
+  }
+  td::before {
+    content: attr(data-head);
+    display: block;
+    font-family: var(--stack-b);
+  }
+}
+
+
+/* -------------------------- BLOCKS ---------------------------- */
+
+div.component-sheet section {
+  padding-top: 1rem;
+  border-top: 3px dotted var(--n-dark);
+  margin-bottom: calc(1.5rem + 1vw);
+}
+
+div.component-sheet h3 {
+  font-family: var(--stack-b);
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+div.demo {
+  padding: 1rem;
+  border: 1px solid var(--n-medium);
+}
+
+div.introduction {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1.5rem 5rem;
+  margin-bottom: calc(1.5rem + 1vw);
+}
+
+div.intro-text {max-width: 45em;}
+
+
+
+/* -------------------------- EDITORIAL -------------------------- */
+
+article.editorial {
+  background-color: var(--n-lighter);
+  padding: 5vh 5%;
+}
+
+.editorial h3 {
+  display: block;
+  font: 1.3rem var(--stack-b);
+  color: var(--sec-color);
+  margin-bottom: 1em;
+}
+
+.editorial h4 {
+  font: 1rem var(--stack-b);
+  margin-bottom: 1em;
+}
+
+.editorial p {line-height: 1.58;}
+.editorial p + p {margin-top: 0.8em;}
+
+.editorial ul {
+  margin: 2rem 1rem;
+}
+.editorial li + li {margin-top: 0.5em;}
+
+
+
+/* ------------------------ TOOLS ---------------------------- */
+
+.sr-only {
+  position: absolute;
+  overflow: hidden;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+}
+
+/* Skip navigation */
+.skip-link {
+	font-size: 0.85em;
+	text-align: center;
+}
+
+	.skip-link a {
+		display: block;
+		position: absolute;
+		overflow: hidden;
+		left: -10000px;
+		top: auto;
+		width: 1px;
+		height: 1px;
+	}
+	.skip-link a:focus {position: static; width: auto; height: auto;}
+
+
+/* ------------------ MEDIA QUERIES ------------------ */
+
+@media screen and (min-width: 1000px) {
+  :root {--nav-width: 300px;}
+
+  p, li, dt, dd {font-size: 1.1em;}
+
+  main#page-body {
+    margin: 1.5rem 1.5rem 2rem calc(var(--nav-width) + 2vw);
+  }
+  div.component-sheet h3 {font-size: 1.6em;}
+
+  div.demo {padding: 2rem;}
+}
+
+@media screen and (min-width: 1300px) {
+  div.introduction {flex-direction: row;}
+}

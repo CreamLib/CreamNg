@@ -27,7 +27,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/assets/css/main.css"
             ],
             "scripts": []
           },
@@ -94,7 +94,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/assets/css/main.css"
             ],
             "scripts": []
           }
@@ -102,5 +102,7 @@
       }
     }
   },
-  "defaultProject": "CreamNg"
+  "cli": {
+    "analytics": false
+  }
 }
