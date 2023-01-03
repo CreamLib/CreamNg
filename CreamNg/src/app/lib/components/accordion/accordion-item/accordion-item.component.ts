@@ -39,6 +39,7 @@ export class AccordionItemComponent implements OnDestroy, OnChanges, OnInit {
   @Input() isOpen: boolean = false;
   @Input() index!: number;
   @Input() titleLevel:string = "2";
+  @Input() total:string = "";
 
   randomIdValue!: number;
   accID!: string;

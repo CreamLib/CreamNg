@@ -6,6 +6,7 @@ button {
   width: 37px;
   height: 36px;
   white-space: nowrap;
+  background-color: var(--main-dark);
   padding: 0;
   z-index: 5;
 }
@@ -22,7 +23,7 @@ svg {
 svg title {display: none;}
 
 button[disabled]:hover {
-  background-color: var(--main-color);
+  background-color: var(--main-dark);
 }
 
 a, a:visited {

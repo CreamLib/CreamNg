@@ -435,6 +435,14 @@ article.editorial {
 }
 .editorial li + li {margin-top: 0.5em;}
 
+.editorial a {
+  text-decoration: underline;
+  color: var(--main-color);
+}
+
+.editorial a:visited {
+  color: var(--n-dark);
+}
 
 
 /* ------------------------ TOOLS ---------------------------- */

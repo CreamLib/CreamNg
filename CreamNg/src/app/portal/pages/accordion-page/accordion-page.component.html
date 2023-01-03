@@ -5,13 +5,13 @@
     <app-tab-panel class="block-style" tabTitle="Demo" [isActive]="true">
 
       <app-accordion titleLevel="4">
-        <app-accordion-item status="error" label="First block">
+        <app-accordion-item label="First block" total="5">
           <p>Content of the block</p>
         </app-accordion-item>
-        <app-accordion-item status="alert" label="Second block">
-          <p>Content of the block</p>
+        <app-accordion-item label="Second block" [isOpen]="true">
+          <p>Content of the block with <a href="#">a link</a></p>
         </app-accordion-item>
-        <app-accordion-item status="ok" label="Third block">
+        <app-accordion-item label="Third block">
           <p>Content of the block</p>
         </app-accordion-item>
         <app-accordion-item label="Forth block">
@@ -23,13 +23,13 @@
     <app-tab-panel tabTitle="Application">
       <pre>
 &lt;app-accordion titleLevel=&#34;4&#34;&gt;
-  &lt;app-accordion-item status=&#34;error&#34; label=&#34;First block&#34;&gt;
+  &lt;app-accordion-item label=&#34;First block&#34; total=&#34;5&#34;&gt;
     &lt;p&gt;NG-CONTENT&lt;/p&gt;
   &lt;/app-accordion-item&gt;
-  &lt;app-accordion-item status=&#34;alert&#34; label=&#34;Second block&#34;&gt;
+  &lt;app-accordion-item label=&#34;Second block&#34; [isOpen]=&#34;true&#34;&gt;
     &lt;p&gt;NG-CONTENT&lt;/p&gt;
   &lt;/app-accordion-item&gt;
-  &lt;app-accordion-item status=&#34;ok&#34; label=&#34;Third block&#34;&gt;
+  &lt;app-accordion-item label=&#34;Third block&#34;&gt;
     &lt;p&gt;NG-CONTENT&lt;/p&gt;
   &lt;/app-accordion-item&gt;
   &lt;app-accordion-item label=&#34;Forth block&#34;&gt;
@@ -85,6 +85,12 @@
       <td data-head="Type">boolean</td>
       <td data-head="Default">false</td>
       <td>Indicates if accordion item should be opened on page load</td>
+    </tr>
+    <tr>
+      <td data-head="Name">total</td>
+      <td data-head="Type">string</td>
+      <td data-head="Default">""</td>
+      <td>Allows to indicate a total value for the accordion item content</td>
     </tr>
   </table>
   <p><em>* mandatory properties</em></p>
