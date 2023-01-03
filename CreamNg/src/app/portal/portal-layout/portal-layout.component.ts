@@ -21,13 +21,14 @@ export class PortalLayoutComponent implements OnInit {
   onActivate(e: any) {
     this.pageTitle = e.pageTitle;
     this.pageType = e.pageType;
+    this.cdr.detectChanges();
+
     this.sectionNodeList = document.querySelectorAll('section');
 
     if(this.sectionNodeList.length == 0) {
       this.isThereSubNav = false;
     }
     this.currentUrl = this.router.url;
-    this.cdr.detectChanges();
   }
 
 }
