@@ -12,6 +12,7 @@ div.hgroup h2 {
 
 div.hgroup ul {
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
   gap: 1.5rem 1rem;
   padding: 0.5rem 0 0.5rem 1.5rem;
@@ -32,6 +33,10 @@ div.hgroup li a::first-letter {text-transform: uppercase;}
 
 
 /* ------------------ MEDIA QUERIES ------------------ */
+
+@media screen and (min-width: 800px) {
+  div.hgroup ul {flex-direction: row;}
+}
 
 @media screen and (min-width: 1000px) {
   div.hgroup h2 {font-size: 2em;}

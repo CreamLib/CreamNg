@@ -13,12 +13,14 @@ export class PortalLayoutComponent implements OnInit {
   ngOnInit(): void { }
 
   pageTitle: string = "";
+  pageType: string = "";
   isThereSubNav: boolean = true;
   sectionNodeList!: any;
   currentUrl: string = this.router.url;
 
   onActivate(e: any) {
     this.pageTitle = e.pageTitle;
+    this.pageType = e.pageType;
     this.sectionNodeList = document.querySelectorAll('section');
 
     if(this.sectionNodeList.length == 0) {

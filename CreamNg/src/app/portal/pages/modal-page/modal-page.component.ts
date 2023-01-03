@@ -12,6 +12,7 @@ export class ModalPageComponent implements OnInit {
   ngOnInit(): void {}
 
   @Output() pageTitle: string = "Modal";
+  @Output() pageType: string = "Component";
 
   // Test for demo puposes
   test() {

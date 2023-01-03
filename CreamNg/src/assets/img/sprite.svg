@@ -13,9 +13,19 @@
           fill:   #cc0000;
         }
     </style>
+    <path id="pic-arrow" class="icon-bt" d="M7.36,6,13,.29a1,1,0,0,1,1.41,0h0a1,1,0,0,1,0,1.42L8.07,8.07a1,1,0,0,1-1.41,0L.29,1.71A1,1,0,0,1,.29.29h0a1,1,0,0,1,1.42,0L7.36,6" transform="translate(0)" />
+    <g id="pic-kebab" style="fill:#fff">
+      <circle cx="7.5" cy="2.5" r="1.35" />
+      <circle cx="7.5" cy="7.5" r="1.35" />
+      <circle cx="7.5" cy="12.5" r="1.35" />
+    </g>
     <g id="bt-menu">
       <path d="M0,0H24V24H0Z" style="fill:none"/>
       <path class="icon-bts" d="M3,4H21V6H3Zm0,7H21v2H3Zm0,7H21v2H3Z"/>
+    </g>
+    <g id="bt-delete">
+      <path d="M8,8H32V32H8Z" style="fill:none"/>
+      <path class="icon-bts" d="M17 6h5v2h-2v13a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V8H2V6h5V3a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1v3zm1 2H6v12h12V8zm-9 3h2v6H9v-6zm4 0h2v6h-2v-6zM9 4v2h6V4H9z"/>
     </g>
     <g id="nav-feedbacks" class="icon-bt">
       <path fill="none" d="M0 0h24v24H0z"/>

@@ -1,0 +1,92 @@
+<section id="accordion">
+  <h3>General component</h3>
+
+  <app-tabs class="block-style" label="Demo and Code">
+    <app-tab-panel class="block-style" tabTitle="Demo" [isActive]="true">
+
+      <app-accordion titleLevel="4">
+        <app-accordion-item status="error" label="First block">
+          <p>Content of the block</p>
+        </app-accordion-item>
+        <app-accordion-item status="alert" label="Second block">
+          <p>Content of the block</p>
+        </app-accordion-item>
+        <app-accordion-item status="ok" label="Third block">
+          <p>Content of the block</p>
+        </app-accordion-item>
+        <app-accordion-item label="Forth block">
+          <p>Content of the block</p>
+        </app-accordion-item>
+      </app-accordion>
+
+    </app-tab-panel>
+    <app-tab-panel tabTitle="Application">
+      <pre>
+&lt;app-accordion titleLevel=&#34;4&#34;&gt;
+  &lt;app-accordion-item status=&#34;error&#34; label=&#34;First block&#34;&gt;
+    &lt;p&gt;NG-CONTENT&lt;/p&gt;
+  &lt;/app-accordion-item&gt;
+  &lt;app-accordion-item status=&#34;alert&#34; label=&#34;Second block&#34;&gt;
+    &lt;p&gt;NG-CONTENT&lt;/p&gt;
+  &lt;/app-accordion-item&gt;
+  &lt;app-accordion-item status=&#34;ok&#34; label=&#34;Third block&#34;&gt;
+    &lt;p&gt;NG-CONTENT&lt;/p&gt;
+  &lt;/app-accordion-item&gt;
+  &lt;app-accordion-item label=&#34;Forth block&#34;&gt;
+    &lt;p&gt;NG-CONTENT&lt;/p&gt;
+  &lt;/app-accordion-item&gt;
+&lt;/app-accordion&gt;
+      </pre>
+    </app-tab-panel>
+  </app-tabs>
+</section>
+
+<section id="props-n-events">
+  <h3>Properties and Events</h3>
+
+  <table class="adaptable">
+    <caption>Properties applicable to the component <code>app-accordion</code></caption>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Type</th>
+      <th scope="col">Default</th>
+      <th scope="col">Description</th>
+    </tr>
+    <tr>
+      <td data-head="Name">titleLevel</td>
+      <td data-head="Type">string</td>
+      <td data-head="Default">"2"</td>
+      <td>Level of title for the accordion blocks; use it to adjust
+        the component to the document's hierarchy</td>
+    </tr>
+    <tr>
+      <td data-head="Name">label</td>
+      <td data-head="Type">string</td>
+      <td data-head="Default">""</td>
+      <td>Adds link with given absolute URL to chip's label</td>
+    </tr>
+  </table>
+  <table class="adaptable">
+    <caption>Properties applicable to the component <code>app-accordion-item</code></caption>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Type</th>
+      <th scope="col">Default</th>
+      <th scope="col">Description</th>
+    </tr>
+    <tr>
+      <td data-head="Name">label</td>
+      <td data-head="Type">string</td>
+      <td data-head="Default">""</td>
+      <td>Defines the title of accordion item</td>
+    </tr>
+    <tr>
+      <td data-head="Name">[isOpen]</td>
+      <td data-head="Type">boolean</td>
+      <td data-head="Default">false</td>
+      <td>Indicates if accordion item should be opened on page load</td>
+    </tr>
+  </table>
+  <p><em>* mandatory properties</em></p>
+</section>
+

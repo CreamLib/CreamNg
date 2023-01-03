@@ -33,7 +33,6 @@ export class MainNavigationComponent implements OnInit {
 
   currentUrl: string = this.router.url;
   navSectionID: string = "";
-  isOpen: boolean = false;
 
   navData = [
     {
@@ -66,7 +65,7 @@ export class MainNavigationComponent implements OnInit {
         },
         {
           "label": "Snackbar",
-          "url": "portal/sbackbar"
+          "url": "portal/snackbar"
         },
         {
           "label": "Messages",
@@ -80,16 +79,20 @@ export class MainNavigationComponent implements OnInit {
       "svgIcon": "nav-tools",
       "subs": [
         {
+          "label": "Chip",
+          "url": "portal/chip"
+        },
+        {
           "label": "Dropdown",
           "url": "portal/dropdown"
         },
         {
-          "label": "Tooltip",
-          "url": "portal/tooltip"
+          "label": "Icon Button",
+          "url": "portal/icon-button"
         },
         {
-          "label": "Chip",
-          "url": "portal/chip"
+          "label": "Tooltip",
+          "url": "portal/tooltip"
         }
       ]
     },
@@ -157,7 +160,7 @@ export class MainNavigationComponent implements OnInit {
   }
   @HostListener('window:keydown', ['$event'])
   keyEvent(event: KeyboardEvent) {
-    if (event.key === 'Escape') {
+    if (event.key === 'Escape' && window.innerWidth < 1000) {
       this.closeNav();
       return;
     }

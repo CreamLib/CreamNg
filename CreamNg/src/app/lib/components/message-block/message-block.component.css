@@ -5,9 +5,13 @@ div {
   padding: 1rem;
   z-index: 1;
 }
-div.error {background-color: var(--hot-u-light);}
+div.error {background-color: var(--hot-sec-light);}
 
-:host ::ng-deep p {margin-left: 40px;}
+:host ::ng-deep p {
+  max-width: 45em;
+  line-height: 1.45;
+  margin-left: 40px;
+}
 
 svg {
   position: absolute;

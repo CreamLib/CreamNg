@@ -1,0 +1,132 @@
+<section id="drop">
+  <h3>Dropdown with label</h3>
+
+  <app-tabs class="block-style" label="Demo and Code">
+    <app-tab-panel class="block-style" tabTitle="Demo" [isActive]="true">
+
+      <app-dropdown label="Label of dropdown">
+        <app-dropdown-item>
+          <button>Action 1</button>
+        </app-dropdown-item>
+        <app-dropdown-item>
+          <button>Action 2</button>
+        </app-dropdown-item>
+      </app-dropdown>
+
+    </app-tab-panel>
+    <app-tab-panel tabTitle="Application">
+      <pre>
+&lt;app-dropdown label=&#34;Label of dropdown&#34;&gt;
+  &lt;app-dropdown-item&gt;
+    &lt;NG-CONTENT&gt;
+  &lt;/app-dropdown-item&gt;
+&lt;/app-dropdown&gt;
+      </pre>
+
+      <div class="explain">
+        <p><code>ng-content</code> must be a link or a button only</p>
+      </div>
+    </app-tab-panel>
+  </app-tabs>
+</section>
+
+<section id="drop-icon">
+  <h3>Dropdown with icon</h3>
+
+  <app-tabs class="block-style" label="Demo and Code">
+    <app-tab-panel class="block-style" tabTitle="Demo" [isActive]="true">
+
+      <app-dropdown imgSrc="nav-feedbacks" imgAlt="Describe the nature of the actions">
+        <app-dropdown-item>
+          <button>Action 1</button>
+        </app-dropdown-item>
+        <app-dropdown-item>
+          <button>Action 2</button>
+        </app-dropdown-item>
+      </app-dropdown>
+
+    </app-tab-panel>
+    <app-tab-panel tabTitle="Application">
+      <pre>
+&lt;app-dropdown imgSrc=&#34;nav-feedbacks&#34; imgAlt=&#34;Describe the nature of the actions&#34;&gt;
+  &lt;app-dropdown-item&gt;
+    &lt;NG-CONTENT&gt;
+  &lt;/app-dropdown-item&gt;
+&lt;/app-dropdown&gt;
+      </pre>
+    </app-tab-panel>
+  </app-tabs>
+</section>
+
+<section id="drop-icon">
+  <h3>Dropdown "Other Actions"</h3>
+
+  <app-tabs class="block-style" label="Demo and Code">
+    <app-tab-panel class="block-style" tabTitle="Demo" [isActive]="true">
+
+      <app-dropdown class="others" ariaLabel="Describe the nature of the actions">
+        <app-dropdown-item>
+          <button>Action 1</button>
+        </app-dropdown-item>
+        <app-dropdown-item>
+          <button>Action 2</button>
+        </app-dropdown-item>
+      </app-dropdown>
+
+    </app-tab-panel>
+    <app-tab-panel tabTitle="Application">
+      <pre>
+&lt;app-dropdown class=&#34;others&#34; ariaLabel=&#34;Describe the nature of the actions&#34;&gt;
+  &lt;app-dropdown-item&gt;
+    &lt;NG-CONTENT&gt;
+  &lt;/app-dropdown-item&gt;
+&lt;/app-dropdown&gt;
+      </pre>
+
+      <app-message-block [isError]="true">
+        <p>In this case, it is mandatory to add a <code>altLabel</code> value to inform the
+          nature of the actions in the dropdown.</p>
+      </app-message-block>
+    </app-tab-panel>
+  </app-tabs>
+</section>
+
+<section id="props-n-events">
+  <h3>Properties and Events</h3>
+
+  <table class="adaptable">
+    <caption>Properties applicable to the component <code>app-dropdown</code></caption>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Type</th>
+      <th scope="col">Default</th>
+      <th scope="col">Description</th>
+    </tr>
+    <tr>
+      <td data-head="Name">label</td>
+      <td data-head="Type">string</td>
+      <td data-head="Default">""</td>
+      <td>Defines label for dropdown trigger button</td>
+    </tr>
+    <tr>
+      <td data-head="Name">imgSrc</td>
+      <td data-head="Type">string</td>
+      <td data-head="Default">""</td>
+      <td>Replaces label by the image indicated by its Id (should be listed in "/assets/img/sprite.svg"). </td>
+    </tr>
+    <tr>
+      <td data-head="Name">imgAlt</td>
+      <td data-head="Type">string</td>
+      <td data-head="Default">""</td>
+      <td>Textual alternative to image.
+        <strong>Mandatory</strong> if <code>imgSrc</code> is set.</td>
+    </tr>
+    <tr>
+      <td data-head="Name">others</td>
+      <td data-head="Type">(class)</td>
+      <td data-head="Default">--</td>
+      <td>Replaces label and arrow by a "kebab" icon</td>
+    </tr>
+  </table>
+  <p><em>* mandatory properties</em></p>
+</section>

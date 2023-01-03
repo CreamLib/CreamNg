@@ -63,6 +63,7 @@ button.level1 {
   align-items: center;
   gap: 0.25em;
   width: 100%;
+  font-family: var(--stack-b);
   background-color: var(--main-dark);
   padding: 0;
 }
@@ -77,15 +78,16 @@ button.level1[aria-expanded=true] + ul.level2 {
   display: block;
 }
 
-
 svg {
   flex: 0 0 24px;
   fill: currentColor;
+  margin-top: -3px;
   transform-origin: 50%;
+  transform: rotate(-90deg);
   transition: all .2s;
 }
 button.level1[aria-expanded=true] svg {
-  transform: rotate(180deg);
+  transform: rotate(0);
 }
 
 nav.opened {

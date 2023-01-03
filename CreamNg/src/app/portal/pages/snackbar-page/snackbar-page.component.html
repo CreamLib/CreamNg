@@ -1,0 +1,79 @@
+<section id="dialog-snackbar">
+  <h3>Dialog Snackbar</h3>
+
+  <div class="introduction editorial">
+    <div class="intro-text">
+      <p>Optional introductory text.</p>
+    </div>
+  </div>
+
+  <app-tabs class="block-style" label="Demo and Code">
+    <app-tab-panel class="block-style" tabTitle="Demo" [isActive]="true">
+
+      <p><button (click)="snackbarDemo.ToggleOpen($event)">
+        Open snackbar
+      </button></p>
+
+      <app-snackbar #snackbarDemo>
+        <p>Are you sure you want to delete all the files?</p>
+        <p class="buttons-bar">
+          <button class="as-reset" (click)="snackbarDemo.ToggleOpen($event)">
+            No
+          </button>
+          <button class="as-submit" (click)="snackbarDemo.ToggleOpen($event)">
+            Yes
+          </button>
+        </p>
+      </app-snackbar>
+
+    </app-tab-panel>
+    <app-tab-panel class="block-style" tabTitle="Code">
+      <pre>
+&lt;app-snackbar #snackbarDemo&gt;
+  &lt;NG-CONTENT&gt;
+&lt;/app-snackbar&gt;
+
+EXAMPLE OF SNACKBAR TRIGGER:
+
+&lt;p&gt;&lt;button (click)=&#34;snackbarDemo.ToggleOpen($event)&#34;&gt;
+  Open snackbar
+&lt;/button&gt;&lt;/p&gt;
+      </pre>
+
+      <div class="explain">
+        <p>You should use the component's unique identifier (template reference)
+          to call the <code>ToggleOpen</code> function to trigger
+          or close the snackbar.</p>
+        <p>You may add aditional functions to the same event.</p>
+      </div>
+    </app-tab-panel>
+  </app-tabs>
+</section>
+
+<section id="props-n-events">
+  <h3>Properties and Events</h3>
+
+  <table class="adaptable">
+    <caption>Properties applicable to the component <code>app-tabs</code></caption>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Type</th>
+      <th scope="col">Default</th>
+      <th scope="col">Description</th>
+    </tr>
+    <tr>
+      <td data-head="Name">isOpen</td>
+      <td data-head="Type">boolean</td>
+      <td data-head="Default">false</td>
+      <td>If "true", opens snackbar</td>
+    </tr>
+    <tr>
+      <td data-head="Name">sbTitle</td>
+      <td data-head="Type">string</td>
+      <td data-head="Default">"Confirmation"</td>
+      <td>The title of the snackbar (screen-readers only)</td>
+    </tr>
+  </table>
+  <p><em>* mandatory properties</em></p>
+</section>
+

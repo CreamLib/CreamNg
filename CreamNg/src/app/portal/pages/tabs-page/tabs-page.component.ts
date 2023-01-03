@@ -12,5 +12,6 @@ export class TabsPageComponent implements OnInit {
   ngOnInit(): void { }
 
   @Output() pageTitle: string = "Tabs";
+  @Output() pageType: string = "Component";
 
 }
