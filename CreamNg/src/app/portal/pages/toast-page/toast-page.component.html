@@ -21,7 +21,7 @@
     <app-tab-panel class="block-style" tabTitle="Demo" [isActive]="true">
 
       <p>
-        <button aria-controls="toast3" (click)="openToast(toast3)">
+        <button aria-controls="toast3" (click)="openToast($event, toast3)">
           General Toast with option
         </button>
       </p>
@@ -44,7 +44,7 @@
 
 EXAMPLE TO TRIGGER THE TOAST
 
-&lt;button aria-controls=&#34;toast3&#34; (click)=&#34;openToast(toast3)&#34;&gt;
+&lt;button aria-controls=&#34;toast3&#34; (click)=&#34;openToast($event, toast3)&#34;&gt;
   General Toast with option
 &lt;/button&gt;
       </pre>
@@ -65,7 +65,7 @@ EXAMPLE TO TRIGGER THE TOAST
     <app-tab-panel class="block-style" tabTitle="Demo" [isActive]="true">
 
       <p>
-        <button aria-controls="toast" (click)="openToast(toast)">
+        <button aria-controls="toast" (click)="openToast($event, toast)">
           Success Toast (default)
         </button>
       </p>
@@ -82,7 +82,7 @@ EXAMPLE TO TRIGGER THE TOAST
 
 EXAMPLE TO TRIGGER THE TOAST
 
-&lt;button aria-controls=&#34;toast&#34; (click)=&#34;openToast(toast)&#34;&gt;
+&lt;button aria-controls=&#34;toast&#34; (click)=&#34;openToast($event, toast)&#34;&gt;
   Success Toast (default)
 &lt;/button&gt;
       </pre>
@@ -107,7 +107,7 @@ EXAMPLE TO TRIGGER THE TOAST
     <app-tab-panel class="block-style" tabTitle="Demo" [isActive]="true">
 
       <p>
-        <button aria-controls="toast2" (click)="openToast(toast2)">
+        <button aria-controls="toast2" (click)="openToast($event, toast2)">
           Alert Toast
         </button>
       </p>
@@ -122,18 +122,18 @@ EXAMPLE TO TRIGGER THE TOAST
     </app-tab-panel>
     <app-tab-panel tabTitle="Application">
       <pre>
-&lt;app-toast id=&#34;toast&#34; #toast toastText=&#34;Positive feedback message&#34;&gt;
-&lt;/app-toast&gt;
-
-
-EXAMPLE TO TRIGGER THE TOAST
-
 &lt;app-toast id=&#34;toast2&#34; #toast2
   role=&#34;alert&#34;
   toastText=&#34;This is an alert message&#34;
   closeBtnTitle=&#34;Close alert&#34;&gt;
   This is an alert message
 &lt;/app-toast&gt;
+
+EXAMPLE TO TRIGGER THE TOAST
+
+&lt;button aria-controls=&#34;toast&#34; (click)=&#34;openToast($event, toast2)&#34;&gt;
+  Success Toast (default)
+&lt;/button&gt;
       </pre>
     </app-tab-panel>
   </app-tabs>
@@ -173,7 +173,9 @@ EXAMPLE TO TRIGGER THE TOAST
       <td data-head="Name">delay</td>
       <td data-head="Type">number</td>
       <td data-head="Default">6500</td>
-      <td>Time in milliseconds to display toast; use it carefully.</td>
+      <td>Time in milliseconds to display toast. Toast will not close
+        by itself if value is set to 0.
+      </td>
     </tr>
     <tr>
       <td data-head="Name">normal</td>

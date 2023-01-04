@@ -1,0 +1,53 @@
+<section id="simple">
+  <h3>General Component</h3>
+
+  <app-tabs class="block-style" label="Demo and Code">
+    <app-tab-panel class="block-style" tabTitle="Demo" [isActive]="true">
+
+      <app-collapsible summary="Title of collapsible panel" total="5">
+        <p>Content of collapsible</p>
+      </app-collapsible>
+
+    </app-tab-panel>
+    <app-tab-panel tabTitle="Application">
+      <pre>
+&lt;app-collapsible summary=&#34;Title of collapsible panel&#34; total=&#34;5&#34;&gt;
+  &lt;NG-CONTENT&gt;
+&lt;/app-collapsible&gt;
+      </pre>
+    </app-tab-panel>
+  </app-tabs>
+</section>
+
+<section id="props-n-events">
+  <h3>Properties and Events</h3>
+
+  <table class="adaptable">
+    <caption>Properties applicable to the component <code>app-collapsible</code></caption>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Type</th>
+      <th scope="col">Default</th>
+      <th scope="col">Description</th>
+    </tr>
+    <tr>
+      <td data-head="Name">summary *</td>
+      <td data-head="Type">string</td>
+      <td data-head="Default">""</td>
+      <td>Defines the title of the panel</td>
+    </tr>
+    <tr>
+      <td data-head="Name">total</td>
+      <td data-head="Type">string</td>
+      <td data-head="Default">""</td>
+      <td>Optional total for the content of the panel</td>
+    </tr>
+    <tr>
+      <td data-head="Name">[isOpen]</td>
+      <td data-head="Type">boolean</td>
+      <td data-head="Default">false</td>
+      <td>If true, panel is open on page load</td>
+    </tr>
+  </table>
+  <p><em>* mandatory properties</em></p>
+</section>

@@ -65,7 +65,7 @@ button.level1 {
   width: 100%;
   font-family: var(--stack-b);
   background-color: var(--main-dark);
-  padding: 0;
+  padding: 0.5em 0;
 }
 button.level1:hover {
   color: var(--sec-light);

@@ -20,8 +20,8 @@ export class ToastPageComponent implements OnInit {
   @ViewChild('toast2', {static: true}) toast2!: ToastComponent;
   @ViewChild('toast3', {static: true}) toast3!: ToastComponent;
 
-  public openToast(toast: ToastComponent) {
-    toast.toggle();
+  public openToast(e: any, toast: ToastComponent) {
+    toast.toggleToast(e);
   }
 
 }

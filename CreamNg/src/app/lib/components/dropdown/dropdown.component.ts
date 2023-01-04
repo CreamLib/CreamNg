@@ -37,6 +37,7 @@ export class DropdownComponent implements OnInit {
     if(event.code === "Escape") {
       this.isOpen = false;
       this.elementRef.nativeElement.querySelector('button.control').focus();
+      event.stopPropagation();
     }
   }
 }

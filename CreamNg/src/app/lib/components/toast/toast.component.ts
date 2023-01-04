@@ -29,25 +29,29 @@ export class ToastComponent implements OnInit {
   @HostListener('window:keydown', ['$event'])
   keyEvent(event: KeyboardEvent) {
     if (event.key === 'Escape') {
-      this.closeToast();
+      this.closeToast(event);
+      event.stopPropagation();
       return;
     }
   }
 
-  public toggle() {
+  public toggleToast(e: any) {
     if (this.active === false) {
       this.active = true;
       // If delay, hide toast after it
       if (this.delay > 0) {
         setTimeout(() => {
-          this.closeToast();
+          this.closeToast(e);
         }, this.delay);
       }
     }
   }
 
-  public closeToast() {
+  public closeToast(e: any) {
     this.active = false;
+    setTimeout(() => {
+      e.target.focus();
+    }, 100);
   }
 
   randomID() {

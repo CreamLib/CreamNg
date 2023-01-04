@@ -45,12 +45,16 @@ export class MainNavigationComponent implements OnInit {
           "url": "portal/accordion"
         },
         {
-          "label": "Tabs",
-          "url": "portal/tabs"
+          "label": "Collapsible",
+          "url": "portal/collapsible"
         },
         {
           "label": "Modal",
           "url": "portal/modal"
+        },
+        {
+          "label": "Tabs",
+          "url": "portal/tabs"
         }
       ]
     },
@@ -93,29 +97,6 @@ export class MainNavigationComponent implements OnInit {
         {
           "label": "Tooltip",
           "url": "portal/tooltip"
-        }
-      ]
-    },
-    {
-      "label": "Forms",
-      "url": "./",
-      "svgIcon": "nav-forms",
-      "subs": [
-        {
-          "label": "Input Error",
-          "url": "portal/input-error"
-        },
-        {
-          "label": "Checkbox / Single",
-          "url": "portal/checkbox"
-        },
-        {
-          "label": "Checkbox / Group",
-          "url": "portal/checkboxes-group"
-        },
-        {
-          "label": "Radios",
-          "url": "portal/radios-group"
         }
       ]
     }
@@ -162,6 +143,7 @@ export class MainNavigationComponent implements OnInit {
   keyEvent(event: KeyboardEvent) {
     if (event.key === 'Escape' && window.innerWidth < 1000) {
       this.closeNav();
+      event.stopPropagation();
       return;
     }
   }
@@ -201,7 +183,7 @@ export class MainNavigationComponent implements OnInit {
 
   // When last link has focus close menu
   isLast(e: any) {
-    if(this.links.last.nativeElement === e.target) {
+    if(this.links.last.nativeElement === e.target && window.innerWidth < 1000) {
       this.closeNav();
     }
   }

@@ -3,8 +3,15 @@
 
   <div class="introduction editorial">
     <div class="intro-text">
-      <p>Optional introductory text.</p>
+      <p>Snackbars work exactly like a modal &mdash; in isolated mode &mdash;, but
+        they are more discrete, appearing at the bottom of the page.</p>
+      <p>Use this component to get feedback from the user.</p>
     </div>
+
+    <app-message-block>
+      <p>As snackbars impose a question that must be answered, it can only be closed
+        by clicking one of the answers buttons.</p>
+    </app-message-block>
   </div>
 
   <app-tabs class="block-style" label="Demo and Code">
@@ -38,6 +45,15 @@ EXAMPLE OF SNACKBAR TRIGGER:
 &lt;p&gt;&lt;button (click)=&#34;snackbarDemo.ToggleOpen($event)&#34;&gt;
   Open snackbar
 &lt;/button&gt;&lt;/p&gt;
+
+EXAMPLE OF BUTTON ACTION:
+
+&lt;button class=&#34;as-reset&#34; (click)=&#34;snackbarDemo.ToggleOpen($event)&#34;&gt;
+  No
+&lt;/button&gt;
+&lt;button class=&#34;as-submit&#34; (click)=&#34;snackbarDemo.ToggleOpen($event)&#34;&gt;
+  Yes
+&lt;/button&gt;
       </pre>
 
       <div class="explain">

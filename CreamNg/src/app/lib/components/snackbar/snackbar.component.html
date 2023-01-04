@@ -7,7 +7,7 @@
   [attr.aria-labelledby]="dialogTitle"
   [attr.aria-describedby]="dialogDescription"
   (keydown)="handleKeyEvents($event)">
-  <div class="overlay" (click)="ToggleOpen($event)"></div>
+  <div class="overlay"></div>
 
   <div class="sb-body">
     <h2 class="sr-only" [id]="dialogTitle">{{ sbTitle }}</h2>

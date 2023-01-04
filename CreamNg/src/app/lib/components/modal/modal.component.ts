@@ -26,6 +26,7 @@ export class ModalComponent implements OnInit {
     if (e.key === 'Escape') {
       this.isOpen = false;
       this.buttonTrigger.focus();
+      e.stopPropagation();
       return;
     }
     if (e.key === 'Tab' || e.keyCode === 9) {

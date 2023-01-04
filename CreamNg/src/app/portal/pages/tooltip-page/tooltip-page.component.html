@@ -1,1 +1,35 @@
-<p>tooltip-page works!</p>
+<div class="introduction editorial">
+  <div class="intro-text">
+    <p>The <code>tooltip</code> directive can be used to display the textual
+      alternative of a <code>svg</code> element.
+      The value of the svg's <code>title</code> element will be
+      displayed in the tooltip.</p>
+    <p>To apply it, just add the <code>appTooltip</code> directive selector to
+      the direct parent of the <code>svg</code> element.</p>
+  </div>
+</div>
+
+<app-tabs class="block-style" label="Demo and Code">
+  <app-tab-panel class="block-style" tabTitle="Demo" [isActive]="true">
+
+    <p>
+      <button appTooltip>
+        <svg role="img" width="24" height="24" style="fill: #FFF">
+          <title>This is the value of the title element</title>
+          <use href="./assets/img/sprite.svg#bt-delete"></use>
+        </svg>
+      </button>
+    </p>
+
+  </app-tab-panel>
+  <app-tab-panel tabTitle="Application">
+    <pre>
+&lt;button appTooltip&gt;
+  &lt;svg role=&#34;img&#34; width=&#34;24&#34; height=&#34;24&#34; style=&#34;fill: #FFF&#34;&gt;
+    &lt;title&gt;This is the value of the title element&lt;/title&gt;
+    &lt;use href=&#34;./assets/img/sprite.svg#bt-delete&#34;&gt;&lt;/use&gt;
+  &lt;/svg&gt;
+&lt;/button&gt;
+    </pre>
+  </app-tab-panel>
+</app-tabs>

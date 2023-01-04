@@ -2,14 +2,9 @@
   <h3>General Tabs</h3>
 
   <div class="introduction editorial">
-    <div class="intro-text">
-      <p>Optional introductory text.</p>
-      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis laborum harum saepe obcaecati asperiores, ut magni minima culpa, laudantium ducimus ipsam consectetur illo voluptates labore. Libero deleniti odit placeat laudantium.</p>
-    </div>
-
     <app-message-block>
-      <p>Optional info or alert</p>
-      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis laborum harum saepe obcaecati asperiores, ut magni minima culpa, laudantium ducimus ipsam consectetur illo voluptates labore. Libero deleniti odit placeat laudantium.
+      <p>Tabs order can be modified through drag and drop.</p>
+      <p>You can use the <code>onChange</code> built-in event to get the updated data.</p>
     </app-message-block>
   </div>
 
@@ -52,10 +47,10 @@
   <h3>Deletable Tabs</h3>
 
   <div class="introduction editorial">
-    <div class="intro-text">
-      <p>Optional introductory text.</p>
-      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis laborum harum saepe obcaecati asperiores, ut magni minima culpa, laudantium ducimus ipsam consectetur illo voluptates labore. Libero deleniti odit placeat laudantium.</p>
-    </div>
+    <app-message-block>
+      <p>The <code>onClose</code> built-in event can be used to retrieve data about
+        the deleted tab.</p>
+    </app-message-block>
   </div>
 
   <app-tabs class="block-style" label="Demo and Code">
@@ -93,15 +88,85 @@
 
 </section>
 
+<section id="discrete-tabs">
+  <h3>Discrete Tabs</h3>
+
+  <app-tabs class="block-style" label="Demo and Code">
+    <app-tab-panel class="block-style" tabTitle="Demo" [isActive]="true">
+
+      <div style="background-color: #FFF; padding: 1rem;">
+        <app-tabs class="discrete" label="Demo for deletable tabs">
+          <app-tab-panel tabTitle="First Tab" [isActive]="true">
+            <p>This is the content of first tab</p>
+          </app-tab-panel>
+          <app-tab-panel tabTitle="Second Tab">
+            <p>This is the content of second tab</p>
+          </app-tab-panel>
+          <app-tab-panel tabTitle="Third Tab">
+            <p>This is the content of third tab</p>
+          </app-tab-panel>
+        </app-tabs>
+      </div>
+
+    </app-tab-panel>
+    <app-tab-panel class="block-style" tabTitle="Code">
+      <pre>
+&lt;app-tabs class=&#34;discrete&#34; label=&#34;Tabs for demo&#34;  [deletable]=&#34;true&#34; &gt;
+  &lt;app-tab-panel tabTitle=&#34;First Tab&#34; [isActive]=&#34;true&#34;&gt;
+    &lt;NG-CONTENT&gt;
+  &lt;/app-tab-panel&gt;
+  &lt;app-tab-panel tabTitle=&#34;Second Tab&#34;&gt;
+    &lt;NG-CONTENT&gt;
+  &lt;/app-tab-panel&gt;
+  &lt;app-tab-panel tabTitle=&#34;Third Tab&#34;&gt;
+    &lt;NG-CONTENT&gt;
+  &lt;/app-tab-panel&gt;
+&lt;/app-tabs&gt;
+      </pre>
+    </app-tab-panel>
+  </app-tabs>
+</section>
+
+<section id="icon-tabs">
+  <h3>Tabs with Icons</h3>
+
+  <app-tabs class="block-style" label="Demo and Code">
+    <app-tab-panel class="block-style" tabTitle="Demo" [isActive]="true">
+
+      <app-tabs label="Demo for deletable tabs">
+        <app-tab-panel tabTitle="First Tab" svgName="nav-forms" svgType="Forms" [isActive]="true">
+          <p>This is the content of first tab</p>
+        </app-tab-panel>
+        <app-tab-panel tabTitle="Second Tab" svgName="nav-blocks" svgType="Blocks" >
+          <p>This is the content of second tab</p>
+        </app-tab-panel>
+        <app-tab-panel tabTitle="Third Tab" svgName="nav-feedbacks" svgType="Feedbacks" >
+          <p>This is the content of third tab</p>
+        </app-tab-panel>
+      </app-tabs>
+
+    </app-tab-panel>
+    <app-tab-panel class="block-style" tabTitle="Code">
+      <pre>
+&lt;app-tabs label=&#34;Demo for deletable tabs&#34;&gt;
+  &lt;app-tab-panel tabTitle=&#34;First Tab&#34; svgName=&#34;nav-forms&#34; svgType=&#34;Forms&#34; [isActive]=&#34;true&#34;&gt;
+    &lt;p&gt;NG-CONTENT&lt;/p&gt;
+  &lt;/app-tab-panel&gt;
+  &lt;app-tab-panel tabTitle=&#34;Second Tab&#34; svgName=&#34;nav-blocks&#34; svgType=&#34;Blocks&#34; &gt;
+    &lt;p&gt;NG-CONTENT&lt;/p&gt;
+  &lt;/app-tab-panel&gt;
+  &lt;app-tab-panel tabTitle=&#34;Third Tab&#34; svgName=&#34;nav-feedbacks&#34; svgType=&#34;Feedbacks&#34; &gt;
+    &lt;p&gt;NG-CONTENT&lt;/p&gt;
+  &lt;/app-tab-panel&gt;
+&lt;/app-tabs&gt;
+      </pre>
+    </app-tab-panel>
+  </app-tabs>
+
+</section>
+
 <section id="responsive-tabs">
   <h3>Responsiveness</h3>
-
-  <div class="introduction editorial">
-    <div class="intro-text">
-      <p>Optional introductory text.</p>
-      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis laborum harum saepe obcaecati asperiores, ut magni minima culpa, laudantium ducimus ipsam consectetur illo voluptates labore. Libero deleniti odit placeat laudantium.</p>
-    </div>
-  </div>
 
   <app-tabs class="block-style" label="Demo and Code">
     <app-tab-panel class="block-style" tabTitle="Demo" [isActive]="true">

@@ -12,6 +12,7 @@ import { DropdownPageComponent } from './portal/pages/dropdown-page/dropdown-pag
 import { TooltipPageComponent } from './portal/pages/tooltip-page/tooltip-page.component';
 import { IconBtPageComponent } from './portal/pages/icon-bt-page/icon-bt-page.component';
 import { AccordionPageComponent } from './portal/pages/accordion-page/accordion-page.component';
+import { CollapsiblePageComponent } from './portal/pages/collapsible-page/collapsible-page.component';
 
 const routes: Routes = [
   //Portal (doc) routes goes here
@@ -28,7 +29,8 @@ const routes: Routes = [
       { path: "dropdown", component: DropdownPageComponent, data: {title: "Dropdown Component"} },
       { path: "tooltip", component: TooltipPageComponent, data: {title: "Tooltip Directive"} },
       { path: "icon-button", component: IconBtPageComponent, data: {title: "Icon Button Component"} },
-      { path: "accordion", component: AccordionPageComponent, data: {title: "Accordion Component"} }
+      { path: "accordion", component: AccordionPageComponent, data: {title: "Accordion Component"} },
+      { path: "collapsible", component: CollapsiblePageComponent, data: {title: "Collapsible Component"} }
     ]
   },
   { path: "home", component: HomepageComponent, data: {title: "CreamNg"} },

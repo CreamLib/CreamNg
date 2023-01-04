@@ -36,6 +36,8 @@ import { AccordionComponent } from './lib/components/accordion/accordion.compone
 import { AccordionItemComponent } from './lib/components/accordion/accordion-item/accordion-item.component';
 import { AccordionPageComponent } from './portal/pages/accordion-page/accordion-page.component';
 import { HComponent } from './lib/components/h/h.component';
+import { CollapsiblePageComponent } from './portal/pages/collapsible-page/collapsible-page.component';
+import { CollapsibleComponent } from './lib/components/collapsible/collapsible.component';
 
 @NgModule({
   declarations: [
@@ -70,7 +72,9 @@ import { HComponent } from './lib/components/h/h.component';
     AccordionComponent,
     AccordionItemComponent,
     AccordionPageComponent,
-    HComponent
+    HComponent,
+    CollapsiblePageComponent,
+    CollapsibleComponent
   ],
   imports: [
     BrowserModule,
