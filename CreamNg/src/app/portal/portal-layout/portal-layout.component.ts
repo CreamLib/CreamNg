@@ -10,7 +10,7 @@ export class PortalLayoutComponent implements OnInit {
 
   constructor(private router: Router, private cdr: ChangeDetectorRef) { }
 
-  ngOnInit(): void { }
+  ngOnInit(): void {}
 
   pageTitle: string = "";
   pageType: string = "";
@@ -24,10 +24,14 @@ export class PortalLayoutComponent implements OnInit {
     this.cdr.detectChanges();
 
     this.sectionNodeList = document.querySelectorAll('section');
+    let snLength = this.sectionNodeList.length;
 
-    if(this.sectionNodeList.length == 0) {
+    if(snLength == 0) {
       this.isThereSubNav = false;
+    } else {
+      this.isThereSubNav = true;
     }
+
     this.currentUrl = this.router.url;
   }
 
