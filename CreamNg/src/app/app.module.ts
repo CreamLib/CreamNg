@@ -38,6 +38,10 @@ import { AccordionPageComponent } from './portal/pages/accordion-page/accordion-
 import { HComponent } from './lib/components/h/h.component';
 import { CollapsiblePageComponent } from './portal/pages/collapsible-page/collapsible-page.component';
 import { CollapsibleComponent } from './lib/components/collapsible/collapsible.component';
+import { TextEllipsisComponent } from './lib/components/text-ellipsis/text-ellipsis.component';
+import { TextEllipsisPageComponent } from './portal/pages/text-ellipsis-page/text-ellipsis-page.component';
+import { ProgressSpinnerPageComponent } from './portal/pages/progress-spinner-page/progress-spinner-page.component';
+import { ProgressSpinnerComponent } from './lib/components/progress-spinner/progress-spinner.component';
 
 @NgModule({
   declarations: [
@@ -74,7 +78,11 @@ import { CollapsibleComponent } from './lib/components/collapsible/collapsible.c
     AccordionPageComponent,
     HComponent,
     CollapsiblePageComponent,
-    CollapsibleComponent
+    CollapsibleComponent,
+    TextEllipsisComponent,
+    TextEllipsisPageComponent,
+    ProgressSpinnerPageComponent,
+    ProgressSpinnerComponent
   ],
   imports: [
     BrowserModule,

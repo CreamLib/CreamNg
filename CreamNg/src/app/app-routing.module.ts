@@ -13,6 +13,8 @@ import { TooltipPageComponent } from './portal/pages/tooltip-page/tooltip-page.c
 import { IconBtPageComponent } from './portal/pages/icon-bt-page/icon-bt-page.component';
 import { AccordionPageComponent } from './portal/pages/accordion-page/accordion-page.component';
 import { CollapsiblePageComponent } from './portal/pages/collapsible-page/collapsible-page.component';
+import { TextEllipsisPageComponent } from './portal/pages/text-ellipsis-page/text-ellipsis-page.component';
+import { ProgressSpinnerPageComponent } from './portal/pages/progress-spinner-page/progress-spinner-page.component';
 
 const routes: Routes = [
   //Portal (doc) routes goes here
@@ -30,7 +32,9 @@ const routes: Routes = [
       { path: "tooltip", component: TooltipPageComponent, data: {title: "Tooltip Directive"} },
       { path: "icon-button", component: IconBtPageComponent, data: {title: "Icon Button Component"} },
       { path: "accordion", component: AccordionPageComponent, data: {title: "Accordion Component"} },
-      { path: "collapsible", component: CollapsiblePageComponent, data: {title: "Collapsible Component"} }
+      { path: "collapsible", component: CollapsiblePageComponent, data: {title: "Collapsible Component"} },
+      { path: "text-ellipsis", component: TextEllipsisPageComponent, data: {title: "Text Ellipsis Component"} },
+      { path: "progress-spinner", component: ProgressSpinnerPageComponent, data: {title: "Progress Spinner Component"} }
     ]
   },
   { path: "home", component: HomepageComponent, data: {title: "CreamNg"} },

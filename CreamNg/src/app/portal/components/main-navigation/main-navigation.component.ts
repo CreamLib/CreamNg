@@ -64,16 +64,16 @@ export class MainNavigationComponent implements OnInit {
       "svgIcon": "nav-feedbacks",
       "subs": [
         {
-          "label": "Toast",
-          "url": "portal/toast"
+          "label": "Messages",
+          "url": "portal/messages"
         },
         {
           "label": "Snackbar",
           "url": "portal/snackbar"
         },
         {
-          "label": "Messages",
-          "url": "portal/messages"
+          "label": "Toast",
+          "url": "portal/toast"
         }
       ]
     },
@@ -93,6 +93,14 @@ export class MainNavigationComponent implements OnInit {
         {
           "label": "Icon Button",
           "url": "portal/icon-button"
+        },
+        {
+          "label": "Progress Spinner",
+          "url": "portal/progress-spinner"
+        },
+        {
+          "label": "Text Ellipsis",
+          "url": "portal/text-ellipsis"
         },
         {
           "label": "Tooltip",
